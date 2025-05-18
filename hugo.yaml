@@ -1,0 +1,73 @@
+baseURL: "https://portfolio.alematta.com"
+languageCode: en-us
+title: Portfolio
+theme: PaperMod
+
+menu:
+  main:
+    - identifier: home
+      name: Home
+      url: /
+      weight: 10
+    - identifier: blog
+      name: Blog
+      url: /blog/
+      weight: 20
+    - identifier: projects
+      name: Projects
+      url: /projects/
+      weight: 30
+    # - identifier: experience
+    #   name: Experience
+    #   url: /experience
+    #   weight: 40
+    - identifier: search
+      name: Search
+      url: /search/
+      weight: 40
+    # - identifier: tags
+    #   name: Tags
+    #   url: /tags
+    #   weight: 60
+
+params:
+  showToc: true
+  TocOpen: false
+
+  profileMode:
+    enabled: true
+    title: "Alessandro Matta"
+    subtitle: "Hi 👋 I’m Alessandro, a student at 42 Roma Luiss. I’m a passionate developer who loves exploring new technologies. Through the projects and challenges at 42, I’ve sharpened my skills in critical thinking, problem-solving, and effective collaboration. My latest project, [Transcendence](/projects/transcendence/transcendence/) is a Single Page Application (SPA) that enhances the classic Pong game, featuring tournament management, 1v1 matches, an AI opponent, a 3D game mode, match history tracking, and advanced monitoring and logging tools for better insights and performance analysis. Beyond coding, I enjoy chess and calisthenics."
+    imageUrl: "/home/amatta.jpg"
+    # imageTitle: "<amatta>"
+    imageWidth: 220
+    imageHeight: 220
+    # buttons:
+    #   - name: Archive
+    #     url: "/archive"
+    #   - name: Github
+    #     url: "https://github.com/"
+
+  socialIcons:
+    - name: "email"
+      url: "mailto:ale.mat0305@gmail.com"
+    - name: "github"
+      url: "https://github.com/almat101"
+    - name: "linkedin"
+      url: "https://www.linkedin.com/in/alessandro-matta-731484237/"
+
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    # limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
+    keys: ["title", "permalink", "summary", "content"]
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # necessary for search
